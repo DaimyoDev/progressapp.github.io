@@ -46,44 +46,6 @@
   --checkbox-accent: #4db6ac;
 }
 
-/* --- Forest Whisper Theme --- */
-/* Colors: BAC1B8, 58A4B0, 0C7C59, 2B303A, D64933 */
-.theme-forest {
-  --bg-primary: #2b303a;
-  --bg-secondary: #3a3f4b;
-  --bg-tertiary: #4d5562;
-  --bg-item: #4d5562;
-  --bg-item-hover: #5a6270;
-  --bg-completed-item: #404650;
-
-  --text-primary: #bac1b8;
-  --text-secondary: #a0a8a0;
-  --text-accent: #58a4b0;
-  --text-placeholder: #808880;
-  --text-completed: #808880;
-  --button-text-color: white;
-
-  --border-primary: #58a4b0;
-  --border-accent: #0c7c59;
-  --border-task-accent: #58a4b0;
-  --border-completed: #6a707a;
-
-  --button-action-bg: #0c7c59;
-  --button-action-hover-bg: #0a6347;
-  --button-nav-bg: #58a4b0;
-  --button-nav-hover-bg: #4a8a94;
-  --button-delete-bg: #d64933;
-  --button-delete-hover-bg: #b03a2e;
-
-  --input-focus-shadow: rgba(12, 124, 89, 0.3);
-  --container-shadow: rgba(0, 0, 0, 0.3);
-  --item-hover-shadow: rgba(0, 0, 0, 0.2);
-
-  --progress-value-bg: linear-gradient(90deg, #0c7c59, #10a575);
-  --progress-value-text: #10a575;
-  --checkbox-accent: #0c7c59;
-}
-
 /* --- Monochrome Pop Theme --- */
 /* Colors: 000000, FFFFFF, 494949, 7C7A7A, FF5D73 */
 .theme-monochrome-pop {
@@ -184,54 +146,6 @@
   color: var(--button-text-color-yellow-bg);
 }
 
-/* --- Japan Theme --- */
-/* Colors: White (#FFFFFF), Red (#BC002D), Neutral Gray */
-.theme-japan {
-  --bg-primary: #f4f4f4; /* Off-white main background */
-  --bg-secondary: #ffffff; /* White for container */
-  --bg-tertiary: #eaeaea; /* Light gray for inputs, progress track */
-  --bg-item: #ffffff;
-  --bg-item-hover: #f0f0f0;
-  --bg-completed-item: #e0e0e0;
-
-  --text-primary: #333333; /* Dark gray for primary text */
-  --text-secondary: #555555;
-  --text-accent: #bc002d; /* Red for titles, accents */
-  --text-placeholder: #888888;
-  --text-completed: #999999;
-  --button-text-color: #ffffff; /* White text on red buttons */
-  --button-text-color-gray-bg: #333333; /* Dark text on gray buttons */
-
-  --border-primary: #dcdcdc;
-  --border-accent: #bc002d; /* Red for item borders, input focus */
-  --border-task-accent: #bc002d;
-  --border-completed: #c0c0c0;
-
-  --button-action-bg: #bc002d; /* Red for primary action buttons */
-  --button-action-hover-bg: #a00026; /* Darker Red */
-  --button-nav-bg: #777777; /* Medium Gray for navigation buttons */
-  --button-nav-hover-bg: #606060;
-  --button-delete-bg: #aaaaaa; /* Light Gray for delete buttons */
-  --button-delete-hover-bg: #909090;
-
-  --input-focus-shadow: rgba(188, 0, 45, 0.3); /* Red shadow */
-  --container-shadow: rgba(0, 0, 0, 0.1);
-  --item-hover-shadow: rgba(0, 0, 0, 0.08);
-
-  --progress-value-bg: linear-gradient(
-    90deg,
-    #bc002d,
-    #d4355b
-  ); /* Red gradient for progress */
-  --progress-value-text: #bc002d; /* Red for progress text */
-  --checkbox-accent: #bc002d; /* Red for checkbox */
-}
-.theme-japan .nav-btn,
-.theme-japan .delete-btn {
-  /* Special case for gray button text */
-  color: var(--button-text-color-gray-bg);
-}
-
 /* --- Brazil Theme --- */
 /* Colors: Green (#009B3A), Yellow (#FFDF00), Blue (#002776), White (#FFFFFF) */
 .theme-brazil {
@@ -326,473 +240,232 @@
   color: var(--button-text-color-dark-bg);
 }
 
-.theme-canada {
-  --bg-primary: #eaeaea;
-  --bg-secondary: #e0e0e0; /* Changed from #FFFFFF to a very light off-white/gray */
-  --bg-tertiary: #f5f5f5;
-  --bg-item: #ffffff; /* Items can remain white to pop against the container */
-  --bg-item-hover: #f0f0f0;
-  --bg-completed-item: #e0e0e0;
-
-  --text-primary: #1a1a1a;
-  --text-secondary: #333333;
-  --text-accent: #d52b1e;
-  --text-placeholder: #6c757d;
-  --text-completed: #707070;
-  --button-text-color: #ffffff;
-  --button-text-color-light-bg: #1a1a1a;
-
-  --border-primary: #c0c0c0;
-  --border-accent: #d52b1e;
-  --border-task-accent: #d52b1e;
-  --border-completed: #b0b0b0;
-
-  --button-action-bg: #d52b1e;
-  --button-action-hover-bg: #b82215;
-  --button-nav-bg: #4a5568;
-  --button-nav-hover-bg: #2d3748;
-  --button-delete-bg: #718096;
-  --button-delete-hover-bg: #4a5568;
-
-  --input-focus-shadow: rgba(213, 43, 30, 0.35);
-  --container-shadow: rgba(0, 0, 0, 0.1);
-  --item-hover-shadow: rgba(0, 0, 0, 0.07);
-
-  --progress-value-bg: linear-gradient(90deg, #d52b1e, #e84f41);
-  --progress-value-text: #d52b1e;
-  --checkbox-accent: #d52b1e;
-}
-.theme-canada .nav-btn,
-.theme-canada .delete-btn {
-  color: var(--button-text-color);
-}
-
-/* --- France Theme (Revised for Distinction) --- */
-/* Colors: Blue (#0055A4), White (#FFFFFF), Red (#EF4135) */
-.theme-france {
-  --bg-primary: #0055a4;
-  --bg-secondary: #d8ddee; /* Changed from #FFFFFF to a very light, cool off-white */
-  --bg-tertiary: #ebf0f7; /* Adjusted for harmony */
-  --bg-item: #ffffff;
-  --bg-item-hover: #f0f3fa; /* Adjusted for harmony */
-  --bg-completed-item: #d8dce6;
-
-  --text-primary: #1c2331;
-  --text-secondary: #3e4b5b;
-  --text-accent: #0055a4;
-  --text-placeholder: #6c7a89;
-  --text-completed: #778391;
-  --button-text-color: #ffffff;
-
-  --border-primary: #b0b9c9;
-  --border-accent: #ef4135;
-  --border-task-accent: #0055a4;
-  --border-completed: #a2acc0;
-
-  --button-action-bg: #ef4135;
-  --button-action-hover-bg: #d93223;
-  --button-nav-bg: #ef4135;
-  --button-nav-hover-bg: #d93223;
-  --button-delete-bg: #7f8c9b;
-  --button-delete-hover-bg: #6c7a89;
-
-  --input-focus-shadow: rgba(0, 85, 164, 0.35);
-  --container-shadow: rgba(0, 85, 164, 0.1);
-  --item-hover-shadow: rgba(0, 85, 164, 0.07);
-
-  --progress-value-bg: linear-gradient(90deg, #0055a4, #3377bb);
-  --progress-value-text: #0055a4;
-  --checkbox-accent: #ef4135;
-}
-
-/* --- Italy Theme (Revised for Distinction) --- */
-/* Colors: Green (#009246), White (#FFFFFF), Red (#CE2B37) */
-.theme-italy {
-  --bg-primary: #ce2b37;
-  --bg-secondary: #e0ebe0; /* Changed from #FFFFFF to a very light, warm off-white */
-  --bg-tertiary: #f1f8e9;
-  --bg-item: #ffffff;
-  --bg-item-hover: #f0fbf0; /* Adjusted for harmony */
-  --bg-completed-item: #d5e8d4;
-
-  --text-primary: #1b2b1e;
-  --text-secondary: #38513b;
-  --text-accent: #009246;
-  --text-placeholder: #6a856c;
-  --text-completed: #7c987f;
-  --button-text-color: #ffffff;
-
-  --border-primary: #a5d6a7;
-  --border-accent: #ce2b37;
-  --border-task-accent: #009246;
-  --border-completed: #90b290;
-
-  --button-action-bg: #009246;
-  --button-action-hover-bg: #007a3f;
-  --button-nav-bg: #ce2b37;
-  --button-nav-hover-bg: #b22029;
-  --button-delete-bg: #7d8a7e;
-  --button-delete-hover-bg: #6a776b;
-
-  --input-focus-shadow: rgba(0, 146, 70, 0.35);
-  --container-shadow: rgba(0, 146, 70, 0.1);
-  --item-hover-shadow: rgba(0, 146, 70, 0.07);
-
-  --progress-value-bg: linear-gradient(90deg, #009246, #33a76a);
-  --progress-value-text: #009246;
-  --checkbox-accent: #ce2b37;
-}
-
-/* --- Spain Theme (Revised for Distinction) --- */
-/* Colors: Red (#C60B1E), Yellow (#FFC400) */
-.theme-spain {
-  --bg-primary: #ffc400;
-  --bg-secondary: #fff0d5; /* Changed from #FFFFFF to a very light, warm off-white */
-  --bg-tertiary: #fffbef; /* Adjusted for harmony */
-  --bg-item: #ffffff;
-  --bg-item-hover: #fffbf2; /* Adjusted for harmony */
-  --bg-completed-item: #ffeecb;
-
-  --text-primary: #3e2723;
-  --text-secondary: #5d4037;
-  --text-accent: #c60b1e;
-  --text-placeholder: #8d6e63;
-  --text-completed: #a1887f;
-  --button-text-color: #ffffff;
-  --button-text-color-yellow-bg: #3e2723;
-
-  --border-primary: #ffecb3;
-  --border-accent: #ffc400;
-  --border-task-accent: #c60b1e;
-  --border-completed: #ffd54f;
-
-  --button-action-bg: #c60b1e;
-  --button-action-hover-bg: #a30a18;
-  --button-nav-bg: #ffc400;
-  --button-nav-hover-bg: #ffb300;
-  --button-delete-bg: #795548;
-  --button-delete-hover-bg: #5d4037;
-
-  --input-focus-shadow: rgba(255, 196, 0, 0.4);
-  --container-shadow: rgba(198, 11, 30, 0.1);
-  --item-hover-shadow: rgba(198, 11, 30, 0.07);
-
-  --progress-value-bg: linear-gradient(90deg, #c60b1e, #e64a4e);
-  --progress-value-text: #c60b1e;
-  --checkbox-accent: #ffc400;
-}
-.theme-spain .nav-btn {
-  color: var(--button-text-color-yellow-bg);
-}
-
-/* --- UK Theme (Revised for Distinction) --- */
-/* Colors: Blue (#00247D), Red (#CF142B), White (#FFFFFF) */
+/* --- UK Theme (Softer Light - Revised Secondary BG) --- */
+/* Colors: Soft Blue-Gray (#E0E8F9), Very Light Blue-Gray (#F7FAFC), Muted Red (#B32134), Medium Blue-Gray (#A9B7CE) */
 .theme-uk {
-  --bg-primary: #cf142b;
-  --bg-secondary: #dce4ec; /* Changed from #FFFFFF to a very light blue tint */
-  --bg-tertiary: #e1e8f0; /* Adjusted for harmony */
+  --bg-primary: #e0e8f9; /* Soft Blue-Gray - Main background */
+  --bg-secondary: #eceff1; /* Very Light Blue-Gray for container (subtly toned) */
+  --bg-tertiary: #f0f4fc; /* Very light blue for inputs, progress track */
   --bg-item: #ffffff;
-  --bg-item-hover: #f8fafc;
-  --bg-completed-item: #dde3eb;
+  --bg-item-hover: #e8effa; /* Even lighter blue for item hover */
+  --bg-completed-item: #d7e2f3; /* Light blue-gray for completed */
 
-  --text-primary: #1b2f54;
-  --text-secondary: #364e7a;
-  --text-accent: #00247d;
-  --text-placeholder: #6a7a99;
-  --text-completed: #7d8caa;
-  --button-text-color: #ffffff;
+  --text-primary: #1e3a8a; /* Deep Blue - Main text */
+  --text-secondary: #475569; /* Slate Gray for subheadings */
+  --text-accent: #b32134; /* Muted Red - Main titles, progress labels */
+  --text-placeholder: #718096; /* Gray for placeholder */
+  --text-completed: #7b8794; /* Blue-gray for completed text */
+  --button-text-color: #ffffff; /* White text for accent buttons */
+  --button-nav-text-color: #ffffff; /* White text for nav buttons */
+  --button-delete-text-color: #ffffff; /* White text for delete buttons */
 
-  --border-primary: #b4c2d9;
-  --border-accent: #cf142b;
-  --border-task-accent: #00247d;
-  --border-completed: #a0afc5;
+  --border-primary: #cbd5e0; /* Light Blue-Gray for general borders */
+  --border-accent: #b32134; /* Muted Red for item borders, input focus */
+  --border-task-accent: #1e3a8a; /* Deep Blue for tasks */
+  --border-completed: #94a3b8; /* Medium Blue-Gray for completed item border */
 
-  --button-action-bg: #00247d;
-  --button-action-hover-bg: #001f6a;
-  --button-nav-bg: #cf142b;
-  --button-nav-hover-bg: #b21024;
-  --button-delete-bg: #52658c;
-  --button-delete-hover-bg: #364e7a;
+  --button-action-bg: #1e3a8a; /* Deep Blue for primary action buttons */
+  --button-action-hover-bg: #172e6b; /* Darker Blue */
+  --button-nav-bg: #b32134; /* Muted Red for navigation buttons */
+  --button-nav-hover-bg: #961a29; /* Darker Red */
+  --button-delete-bg: #64748b; /* Blue-Gray for delete buttons */
+  --button-delete-hover-bg: #4a5568; /* Darker Blue-Gray */
 
-  --input-focus-shadow: rgba(0, 36, 125, 0.35);
-  --container-shadow: rgba(0, 36, 125, 0.12);
-  --item-hover-shadow: rgba(0, 36, 125, 0.08);
+  --input-focus-shadow: rgba(179, 33, 52, 0.25); /* Muted Red shadow (softer) */
+  --container-shadow: rgba(0, 0, 0, 0.05); /* Very subtle black shadow */
+  --item-hover-shadow: rgba(0, 0, 0, 0.03); /* Extremely subtle black shadow */
 
-  --progress-value-bg: linear-gradient(90deg, #00247d, #3352a0);
-  --progress-value-text: #00247d;
-  --checkbox-accent: #cf142b;
+  --progress-value-bg: linear-gradient(
+    90deg,
+    #1e3a8a,
+    #4299e1
+  ); /* Blue gradient */
+  --progress-value-text: #1e3a8a; /* Deep Blue for progress text */
+  --checkbox-accent: #b32134; /* Muted Red for checkbox */
 }
 
-/* --- Netherlands Theme (Revised for Distinction) --- */
-/* Colors: Red (#AE1C28), White (#FFFFFF), Blue (#21468B) */
-.theme-netherlands {
-  --bg-primary: #21468b;
-  --bg-secondary: #edf2f7; /* Changed from #FFFFFF to a light, cool off-white */
-  --bg-tertiary: #e0e7ee; /* Adjusted for harmony */
-  --bg-item: #ffffff;
-  --bg-item-hover: #f8fafc;
-  --bg-completed-item: #d7dee6;
+.theme-obsidian-ember {
+  --bg-primary: #121212; /* Dark Charcoal - Main background */
+  --bg-secondary: #1e1e1e; /* Slightly lighter dark gray for container */
+  --bg-tertiary: #333333; /* Dark gray for inputs, progress track */
+  --bg-item: #282828; /* Dark gray for items */
+  --bg-item-hover: #404040; /* Lighter gray for item hover */
+  --bg-completed-item: #202020; /* Even darker gray for completed */
 
-  --text-primary: #1a2a47;
-  --text-secondary: #354a6d;
-  --text-accent: #ae1c28;
-  --text-placeholder: #667894;
-  --text-completed: #7a8aa4;
-  --button-text-color: #ffffff;
+  --text-primary: #ffffff; /* White - Main text */
+  --text-secondary: #fbe9e7; /* Very light orange for subheadings */
+  --text-accent: #ff4500; /* Deep Red-Orange Accent - Main titles, progress labels */
+  --text-placeholder: #9e9e9e; /* Medium gray for placeholder */
+  --text-completed: #9e9e9e; /* Medium gray for completed text */
+  --button-text-color: #ffffff; /* White text for accent buttons */
+  /* --button-dark-text-color: #000000; /* Black text for lighter buttons if needed */
 
-  --border-primary: #b0beda;
-  --border-accent: #21468b;
-  --border-task-accent: #ae1c28;
-  --border-completed: #9caac0;
+  --border-primary: #424242; /* Darker gray for general borders */
+  --border-accent: #ff4500; /* Deep Red-Orange Accent for item borders, input focus */
+  --border-task-accent: #ff4500; /* Deep Red-Orange Accent for tasks */
+  --border-completed: #616161; /* Medium-dark gray for completed item border */
 
-  --button-action-bg: #ae1c28;
-  --button-action-hover-bg: #8c161f;
-  --button-nav-bg: #21468b;
-  --button-nav-hover-bg: #1a3a73;
-  --button-delete-bg: #5f7394;
-  --button-delete-hover-bg: #4a5b7a;
-
-  --input-focus-shadow: rgba(33, 70, 139, 0.35);
-  --container-shadow: rgba(33, 70, 139, 0.12);
-  --item-hover-shadow: rgba(33, 70, 139, 0.08);
-
-  --progress-value-bg: linear-gradient(90deg, #ae1c28, #c84b55);
-  --progress-value-text: #ae1c28;
-  --checkbox-accent: #21468b;
-}
-
-/* --- Bavaria Theme --- */
-/* Colors: Bavarian Blue (approx #0066CC), White (#FFFFFF), Grays */
-.theme-bavaria {
-  --bg-primary: #ebf4fa; /* Very light, cool blue-gray page background */
-  --bg-secondary: #ffffff; /* White container for a crisp, clean look */
-  --bg-tertiary: #f0f8ff; /* Alice blue for inputs, progress track (very light blue) */
-  --bg-item: #f8fcff; /* Slightly off-white for items, or #FFFFFF */
-  --bg-item-hover: #e6f0f5; /* Light blue hover for items */
-  --bg-completed-item: #dce6ed; /* Muted blue-gray for completed items */
-
-  --text-primary: #1c3b57; /* Dark, slightly desaturated blue for main text */
-  --text-secondary: #3a5f82; /* Lighter shade of dark blue for subheadings */
-  --text-accent: #0066cc; /* Bavarian Blue for titles, progress labels */
-  --text-placeholder: #7a9bbd; /* Softer blue-gray for placeholders */
-  --text-completed: #8aa8c5; /* Muted text for completed items */
-  --button-text-color: #ffffff; /* White text for primary blue buttons */
-  --button-text-color-light-bg: #0052a3; /* Darker Bavarian blue for text on light buttons */
-
-  --border-primary: #b0c4de; /* Light Steel Blue for general borders */
-  --border-accent: #0066cc; /* Bavarian Blue for item accents (left border) */
-  --border-task-accent: #0066cc; /* Bavarian Blue for task-specific accents */
-  --border-completed: #9eb5d0; /* Muted blue-gray border for completed items */
-
-  --button-action-bg: #0066cc; /* Bavarian Blue for main action buttons */
-  --button-action-hover-bg: #0052a3; /* Darker Bavarian Blue */
-  --button-nav-bg: #d0e0f0; /* Light blue-gray for navigation buttons */
-  --button-nav-hover-bg: #b9cbdd; /* Darker light blue-gray */
-  --button-delete-bg: #a0b0c0; /* Medium gray-blue for delete buttons */
-  --button-delete-hover-bg: #8c9baa; /* Darker medium gray-blue */
+  --button-action-bg: #ff4500; /* Deep Red-Orange Accent for primary action buttons */
+  --button-action-hover-bg: #e63900; /* Slightly darker orange-red */
+  --button-nav-bg: #333333; /* Dark gray for navigation buttons */
+  --button-nav-hover-bg: #616161; /* Medium-dark gray for nav hover */
+  --button-delete-bg: #9e9e9e; /* Medium gray for delete buttons (matches placeholder/completed text) */
+  --button-delete-hover-bg: #757575; /* Darker medium gray for delete hover */
+  --button-delete-text-color: #ffffff; /* White text for delete buttons */
 
   --input-focus-shadow: rgba(
+    255,
+    69,
     0,
-    102,
-    204,
-    0.35
-  ); /* Bavarian Blue shadow for focused inputs */
-  --container-shadow: rgba(
-    0,
-    102,
-    204,
-    0.1
-  ); /* Subtle blue shadow for the container */
+    0.4
+  ); /* Deep Red-Orange shadow for focused input */
+  --container-shadow: rgba(0, 0, 0, 0.3); /* Subtle black shadow */
   --item-hover-shadow: rgba(
     0,
-    102,
-    204,
-    0.07
-  ); /* Subtle blue shadow for hovered items */
+    0,
+    0,
+    0.2
+  ); /* Subtle black shadow for item hover */
 
   --progress-value-bg: linear-gradient(
     90deg,
-    #0066cc,
-    #0077e6
-  ); /* Blue gradient for progress bar */
-  --progress-value-text: #0066cc; /* Bavarian Blue for progress percentage text */
-  --checkbox-accent: #0066cc; /* Bavarian Blue for checkbox accent */
+    #ff4500,
+    #ff7043
+  ); /* Red-Orange gradient for progress */
+  --progress-value-text: #ff4500; /* Deep Red-Orange for progress percentage text */
+  --checkbox-accent: #ff4500; /* Deep Red-Orange for checkbox */
 }
 
-/* Special case for button text color on light backgrounds for Bavaria theme */
-.theme-bavaria .nav-btn {
-  color: var(--button-text-color-light-bg);
-}
-.theme-bavaria .delete-btn {
-  color: var(--button-text-color); /* White text can work on this gray-blue */
-}
+.theme-shadowfire {
+  --bg-primary: #0a0a0a; /* Near Black - Main background */
+  --bg-secondary: #1c1c1c; /* Very dark gray for container */
+  --bg-tertiary: #333333; /* Dark gray for inputs, progress track */
+  --bg-item: #282828; /* Dark gray for items */
+  --bg-item-hover: #404040; /* Lighter gray for item hover */
+  --bg-completed-item: #202020; /* Slightly different dark for completed */
 
-.theme-cosmic-plum {
-  --bg-primary: #0b0033;
-  --bg-secondary: #370031;
-  --bg-tertiary: #0b0033; /* For inputs, progress track */
-  --bg-item: #0b0033; /* For project/milestone/task items */
-  --bg-item-hover: #5c1823; /* Using a distinct palette color for hover */
-  --bg-completed-item: #2a0025; /* Darker, muted version of #370031 */
+  --text-primary: #ffffff; /* White - Main text */
+  --text-secondary: #f0f0f0; /* Light gray for subheadings */
+  --text-accent: #ffff00; /* Electric Yellow Accent - Main titles, progress labels */
+  --text-placeholder: #8a8a8a; /* Medium gray for placeholder */
+  --text-completed: #8a8a8a; /* Medium gray for completed text */
+  --button-text-color: #000000; /* Black text for accent buttons */
+  --button-action-text-color: #000000; /* Black text for electric yellow action buttons (high contrast) */
+  --button-nav-text-color: #ffffff;
 
-  --text-primary: #eaf27c;
-  --text-secondary: #ce8964; /* For less emphasized text */
-  --text-accent: #eaf27c; /* For main titles, progress labels */
-  --text-placeholder: rgba(206, 137, 100, 0.7); /* Based on #CE8964 */
-  --text-completed: rgba(206, 137, 100, 0.8); /* Based on #CE8964 */
-  --button-text-color: #ffffff;
+  --border-primary: #444444; /* Dark Gray for general borders */
+  --border-accent: #ffff00; /* Electric Yellow Accent for item borders, input focus */
+  --border-task-accent: #ffff00; /* Electric Yellow Accent for tasks */
+  --border-completed: #666666; /* Medium-dark gray for completed item border */
 
-  --border-primary: #832232; /* General borders */
-  --border-accent: #ce8964; /* Accent border for items, input focus */
-  --border-task-accent: #eaf27c; /* Specific accent for tasks */
-  --border-completed: #5c1823; /* Darker #832232 */
+  --button-action-bg: #ffff00; /* Electric Yellow Accent for primary action buttons */
+  --button-action-hover-bg: #e6e600; /* Slightly darker yellow */
+  --button-nav-bg: #333333; /* Dark gray for navigation buttons */
+  --button-nav-hover-bg: #666666; /* Medium-dark gray for nav hover */
+  --button-delete-bg: #8a8a8a; /* Medium gray for delete buttons (matches placeholder/completed text) */
+  --button-delete-hover-bg: #666666; /* Darker medium gray for delete hover */
+  --button-delete-text-color: #ffffff; /* White text for delete buttons */
 
-  --button-action-bg: #832232; /* Maroon */
-  --button-action-hover-bg: #6f1d2a; /* Darker Maroon */
-  --button-nav-bg: #0b0033; /* Mid Purple */
-  --button-nav-hover-bg: #080024; /* Darker Mid Purple */
-  --button-delete-bg: #832232; /* Maroon (Note: Reused, ideally a more distinct "danger" red if palette allowed) */
-  --button-delete-hover-bg: #6f1d2a; /* Darker Maroon */
-
-  --input-focus-shadow: rgba(206, 137, 100, 0.3); /* Based on #CE8964 */
-  --container-shadow: rgba(0, 0, 0, 0.4);
-  --item-hover-shadow: rgba(0, 0, 0, 0.3);
-
-  --progress-value-bg: linear-gradient(90deg, #832232, #ce8964);
-  --progress-value-text: #eaf27c;
-  --checkbox-accent: #eaf27c;
-}
-
-.theme-shadowed-cove {
-  --bg-primary: #2f2963;
-  --bg-secondary: #454372;
-  --bg-tertiary: #2f2963;
-  --bg-item: #2f2d4d;
-  --bg-item-hover: #5e5c9a; /* Lighter version of #454372 */
-  --bg-completed-item: #3a366a; /* Muted/darker #454372 */
-
-  --text-primary: #ef946c;
-  --text-secondary: #c4a77d;
-  --text-accent: #ef946c;
-  --text-placeholder: rgba(196, 167, 125, 0.7); /* Based on #C4A77D */
-  --text-completed: rgba(196, 167, 125, 0.8);
-  --button-text-color: #ffffff;
-
-  --border-primary: #70877f;
-  --border-accent: #c4a77d;
-  --border-task-accent: #ef946c;
-  --border-completed: #566963; /* Darker #70877F */
-
-  /* Note: #70877F has low contrast (3.98:1) with white text for buttons. */
-  /* Consider using #EF946C (peach) for text on #70877F buttons if possible, */
-  /* or ensure buttons using this color are large. */
-  /* Using the darker blues from palette for buttons to maintain white text contrast: */
-  --button-action-bg: #454372; /* Mid Blue/Purple */
-  --button-action-hover-bg: #3a366a; /* Darker Mid Blue/Purple */
-  --button-nav-bg: #70877f; /* Steel Green-Gray. Text should ideally be dark. */
-  /* For this example, assuming icons or context help if text contrast is low, */
-  /* or button-text-color would be overridden for this specific button. */
-  /* A safer nav button with white text: #2F2963 */
-  /* --button-nav-bg: #2F2963; */
-  /* --button-nav-hover-bg: #221E4A; */
-  --button-nav-hover-bg: #5e736c; /* Darker Steel Green-Gray */
-  --button-delete-bg: #454372; /* Reusing Mid Blue/Purple. Palette lacks a good "danger" color for dark themes with white text. #EF946C is light and needs dark text. */
-  --button-delete-hover-bg: #3a366a;
-
-  --input-focus-shadow: rgba(239, 148, 108, 0.3); /* Based on #EF946C */
-  --container-shadow: rgba(0, 0, 0, 0.4);
-  --item-hover-shadow: rgba(0, 0, 0, 0.3);
-
-  --progress-value-bg: linear-gradient(90deg, #454372, #70877f);
-  --progress-value-text: #ef946c;
-  --checkbox-accent: #ef946c;
-}
-
-.theme-sunbaked-terracotta {
-  --bg-primary: #fefdff;
-  --bg-secondary: #c1bfb5;
-  --bg-tertiary: #fefdff;
-  --bg-item: #fefdff;
-  --bg-item-hover: #e8e7e1; /* Slightly darker than #C1BFB5 or a lighter version of it */
-  --bg-completed-item: #d0cfca; /* Muted #C1BFB5 */
-
-  --text-primary: #b02e0c; /* Rust */
-  --text-secondary: #eb4511; /* Sky Blue (Note: contrast 3.28:1 on white, use for larger/less critical text) */
-  --text-accent: #eb4511; /* Bright Orange */
-  --text-placeholder: rgba(176, 46, 12, 0.6); /* Based on #B02E0C */
-  --text-completed: rgba(176, 46, 12, 0.7);
-  --button-text-color: #fefdff; /* White text for buttons */
-
-  --border-primary: #c1bfb5;
-  --border-accent: #eb4511;
-  --border-task-accent: #eb4511;
-  --border-completed: #8eb1c7;
-
-  /* Button notes: White text (#FEFDFF) on #EB4511 (3.01:1) is only okay for large text. */
-  /* White text on #8EB1C7 (2.07:1) has poor contrast. */
-  /* This palette is challenging for a single button text color. */
-  /* Using the darkest color for action, and noting contrast for others. */
-  --button-action-bg: #b02e0c; /* Rust (Contrast with white text: 5.07:1 - Good) */
-  --button-action-hover-bg: #8c240a; /* Darker Rust */
-  --button-nav-bg: #eb4511; /* Bright Orange (Use with caution with white text, or ensure large text) */
-  --button-nav-hover-bg: #d53d0f; /* Darker Bright Orange */
-  --button-delete-bg: #eb4511; /* Bright Orange (Same as Nav, implies danger with color. Same contrast note) */
-  --button-delete-hover-bg: #d53d0f;
-
-  --input-focus-shadow: rgba(235, 69, 17, 0.3); /* Based on #EB4511 */
-  --container-shadow: rgba(
-    142,
-    177,
-    199,
-    0.25
-  ); /* Softer shadow using #8EB1C7 */
-  --item-hover-shadow: rgba(142, 177, 199, 0.2);
-
-  --progress-value-bg: linear-gradient(90deg, #8eb1c7, #eb4511);
-  --progress-value-text: #b02e0c; /* Dark text on this gradient */
-  --checkbox-accent: #eb4511;
-}
-
-.theme-minted-sunlight {
-  --bg-primary: #ffffff;
-  --bg-secondary: #bdd9bf; /* Light Mint */
-  --bg-tertiary: #ffc857;
-  --bg-item: #ffffff;
-  --bg-item-hover: #eef5ee; /* Very light mint, derived from #BDD9BF / #FFFFFF */
-  --bg-completed-item: #e6ebe7; /* Muted/slightly darker than item hover */
-
-  --text-primary: #2e4052; /* Dark Grayish Blue */
-  --text-secondary: #412234; /* Dark Purple/Maroon */
-  --text-accent: #2e4052; /* Gold */
-  --text-placeholder: rgba(46, 64, 82, 0.6); /* Based on #2E4052 */
-  --text-completed: rgba(46, 64, 82, 0.7);
-  --button-text-color: #ffffff; /* White text for buttons */
-
-  --border-primary: #bdd9bf;
-  --border-accent: #ffc857;
-  --border-task-accent: #ffc857;
-  --border-completed: #accab0; /* Darker Mint */
-
-  /* Button text white. Dark palette colors used for BGs. */
-  /* #2E4052 (4.25:1) and #412234 (4.03:1) with white text are acceptable, ideally for larger/bolder text. */
-  --button-action-bg: #2e4052; /* Dark Grayish Blue */
-  --button-action-hover-bg: #22303f; /* Darker Grayish Blue */
-  --button-nav-bg: #412234; /* Dark Purple/Maroon */
-  --button-nav-hover-bg: #311a27; /* Darker Purple/Maroon */
-  --button-delete-bg: #412234; /* Reusing Dark Purple/Maroon for delete (palette lacks a traditional red) */
-  --button-delete-hover-bg: #311a27;
-
-  --input-focus-shadow: rgba(255, 200, 87, 0.4); /* Based on #FFC857 (Gold) */
-  --container-shadow: rgba(46, 64, 82, 0.15); /* Subtle shadow from #2E4052 */
-  --item-hover-shadow: rgba(46, 64, 82, 0.1);
+  --input-focus-shadow: rgba(
+    255,
+    255,
+    0,
+    0.4
+  ); /* Electric Yellow shadow for focused input */
+  --container-shadow: rgba(0, 0, 0, 0.3); /* Subtle black shadow */
+  --item-hover-shadow: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Subtle black shadow for item hover */
 
   --progress-value-bg: linear-gradient(
     90deg,
-    #bdd9bf,
-    #ffc857
-  ); /* Mint to Gold */
-  --progress-value-text: #2e4052; /* Dark text on this gradient */
-  --checkbox-accent: #ffc857; /* Gold */
+    #ffff00,
+    #ffff66
+  ); /* Yellow gradient for progress */
+  --progress-value-text: #ffff00; /* Electric Yellow for progress percentage text */
+  --checkbox-accent: #ffff00; /* Electric Yellow for checkbox */
+}
+
+.theme-shadowfire .action-btn {
+  color: var(--button-action-text-color);
+}
+
+.theme-shadowfire .nav-btn {
+  color: var(--button-nav-text-color);
+}
+
+.theme-shadowfire .delete-btn {
+  color: #ffffff; /* White text for medium gray delete button (good contrast) */
+}
+
+/* --- Abyssal Glow Theme --- */
+/* Colors: Deep Navy (#0A192F), Cyan Accent (#64FFDA), Dark Charcoal (#1E293B), Light Gray (#CCD6F6) */
+.theme-abyssal-glow {
+  --bg-primary: #0a192f; /* Deep Navy - Main background */
+  --bg-secondary: #1e293b; /* Dark Charcoal for container */
+  --bg-tertiary: #303c4e; /* Darker Charcoal for inputs, progress track */
+  --bg-item: #233554; /* Dark blue for items */
+  --bg-item-hover: #30476d; /* Lighter dark blue for item hover */
+  --bg-completed-item: #132f4c; /* Even darker blue for completed */
+
+  --text-primary: #ccd6f6; /* Light Gray - Main text */
+  --text-secondary: #a8b2d1; /* Slightly darker light gray for subheadings */
+  --text-accent: #64ffda; /* Cyan Accent - Main titles, progress labels */
+  --text-placeholder: #8892b0; /* Medium blue-gray for placeholder */
+  --text-completed: #8892b0; /* Medium blue-gray for completed text */
+  --button-text-color: #0a192f; /* Dark Navy text for accent buttons */
+  --button-action-text-color: #0a192f; /* Deep Navy text for cyan action buttons (provides contrast) */
+  --button-nav-text-color: #ccd6f6;
+
+  --border-primary: #374974; /* Dark blue-gray for general borders */
+  --border-accent: #64ffda; /* Cyan Accent for item borders, input focus */
+  --border-task-accent: #64ffda; /* Cyan Accent for tasks */
+  --border-completed: #495670; /* Muted blue for completed item border */
+
+  --button-action-bg: #64ffda; /* Cyan Accent for primary action buttons */
+  --button-action-hover-bg: #4accbd; /* Slightly darker cyan */
+  --button-nav-bg: #303c4e; /* Darker Charcoal for navigation buttons */
+  --button-nav-hover-bg: #495670; /* Muted blue for nav hover */
+  --button-delete-bg: #ff6b6b; /* Muted Red-Orange for delete buttons */
+  --button-delete-hover-bg: #e64a4a; /* Darker Muted Red-Orange for delete hover */
+  --button-delete-text-color: #ffffff; /* White text for delete buttons */
+
+  --input-focus-shadow: rgba(
+    100,
+    255,
+    218,
+    0.4
+  ); /* Cyan shadow for focused input */
+  --container-shadow: rgba(0, 0, 0, 0.2); /* Subtle black shadow */
+  --item-hover-shadow: rgba(
+    0,
+    0,
+    0,
+    0.15
+  ); /* Subtle black shadow for item hover */
+
+  --progress-value-bg: linear-gradient(
+    90deg,
+    #64ffda,
+    #a7ffe3
+  ); /* Cyan gradient for progress */
+  --progress-value-text: #64ffda; /* Cyan for progress percentage text */
+  --checkbox-accent: #64ffda; /* Cyan for checkbox */
+}
+
+.theme-abyssal-glow .action-btn {
+  color: var(--button-action-text-color);
+}
+
+.theme-abyssal-glow .nav-btn {
+  color: var(--button-nav-text-color);
+}
+
+.theme-abyssal-glow .delete-btn {
+  color: #ffffff; /* White text for muted red-orange delete button (good contrast) */
 }
 
 /* --- GENERAL STYLES (using CSS variables) --- */
