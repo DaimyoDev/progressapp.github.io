@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamified Productivity Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-dark">
+    <div style="text-align: center; margin-top: 15px; margin-bottom: -10px">
+      <a
+        href="game.html"
+        class="action-btn"
+        style="text-decoration: none; display: inline-block"
+        >Productivity Race!</a
+      >
+    </div>
+    <div class="container">
+      <header>
+        <h1>Productivity Quest</h1>
+        <div class="theme-selector-container">
+          <label for="theme-select">Theme:</label>
+          <select id="theme-select">
+            <option value="theme-dark">Dark Abyss</option>
+            <option value="theme-forest">Forest Whisper</option>
+            <option value="theme-monochrome-pop">Monochrome Pop</option>
+            <option value="theme-germany">Germany</option>
+            <option value="theme-japan">Japan</option>
+            <option value="theme-brazil">Brazil</option>
+            <option value="theme-jamaica">Jamaica</option>
+            <option value="theme-canada">Canada</option>
+            <option value="theme-france">France</option>
+            <option value="theme-italy">Italy</option>
+            <option value="theme-spain">Spain</option>
+            <option value="theme-uk">United Kingdom</option>
+            <option value="theme-netherlands">Netherlands</option>
+            <option value="theme-bavaria">Bavaria</option>
+            <option value="theme-cosmic-plum">Cosmic Plum</option>
+            <option value="theme-shadowed-cove">Shadowed Cove</option>
+            <option value="theme-sunbaked-terracotta">
+              Sunbaked Terracotta
+            </option>
+            <option value="theme-minted-sunlight">Minted Sunlight</option>
+          </select>
+        </div>
+      </header>
+
+      <div id="projects-view" class="view active-view">
+        <h2>My Quests (Projects)</h2>
+        <div class="input-group">
+          <input
+            type="text"
+            id="new-project-name"
+            placeholder="Name your new quest..."
+          />
+          <button id="add-project-btn" class="action-btn">
+            Embark on Quest
+          </button>
+        </div>
+        <div id="projects-list" class="list-container"></div>
+      </div>
+
+      <div id="milestones-view" class="view">
+        <button class="nav-btn" id="back-to-projects-btn">
+          &larr; Back to Quests
+        </button>
+        <h2 id="current-project-title"></h2>
+        <div class="progress-bar-container">
+          <label for="project-overall-progress">Quest Progress:</label>
+          <progress
+            id="project-overall-progress"
+            value="0"
+            max="100"
+          ></progress>
+          <span id="project-overall-progress-text">0%</span>
+        </div>
+        <h3>Stages (Milestones)</h3>
+        <div class="input-group">
+          <input
+            type="text"
+            id="new-milestone-name"
+            placeholder="Define a new stage..."
+          />
+          <button id="add-milestone-btn" class="action-btn">Add Stage</button>
+        </div>
+        <div id="milestones-list" class="list-container"></div>
+      </div>
+
+      <div id="tasks-view" class="view">
+        <button class="nav-btn" id="back-to-milestones-btn">
+          &larr; Back to Stages
+        </button>
+        <h2 id="current-milestone-title"></h2>
+        <div class="progress-bar-container">
+          <label for="milestone-specific-progress">Stage Progress:</label>
+          <progress
+            id="milestone-specific-progress"
+            value="0"
+            max="100"
+          ></progress>
+          <span id="milestone-specific-progress-text">0%</span>
+        </div>
+        <h3>Objectives (Tasks)</h3>
+        <div class="input-group">
+          <input
+            type="text"
+            id="new-task-description"
+            placeholder="Set an objective..."
+          />
+          <button id="add-task-btn" class="action-btn">Add Objective</button>
+        </div>
+        <ul id="tasks-list" class="list-container"></ul>
+      </div>
+    </div>
+
+    <audio id="sound-add-item" src="add-item.mp3" preload="auto"></audio>
+    <audio
+      id="sound-complete-task"
+      src="complete-task.mp3"
+      preload="auto"
+    ></audio>
+    <audio id="sound-delete-item" src="delete-item.mp3" preload="auto"></audio>
+    <audio id="sound-open-view" src="open-view.mp3" preload="auto"></audio>
+
+    <script src="app.js"></script>
+  </body>
+</html>

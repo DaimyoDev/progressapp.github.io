@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Race - Gamified Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ... (All existing styles from the previous step remain the same) ... */
+      .competitor-area {
+        margin-bottom: 15px;
+      }
+      .competitor-area .progress-bar-container label {
+        font-weight: 500;
+        font-size: 0.95em;
+      }
+      #ai-racers-dynamic-area .progress-bar-container {
+        margin-bottom: 12px;
+      }
+
+      #game-status {
+        margin-top: 20px;
+        font-size: 1.2em;
+        text-align: center;
+        font-weight: bold;
+        min-height: 2em;
+      }
+
+      .setup-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .setup-controls > div {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+      }
+      .setup-controls label {
+        margin-right: 5px;
+        font-size: 0.9em;
+        display: block;
+        margin-bottom: 3px;
+      }
+      .setup-controls select,
+      #race-project-select,
+      #num-bots-select {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        width: 100%;
+        border: 1px solid var(--border-primary);
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+        border-radius: 4px;
+      }
+
+      .time-input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .time-input-fields {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .time-input-fields > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .time-input-fields input[type="number"] {
+        width: 60px;
+        padding: 8px;
+        font-size: 0.9em;
+        text-align: center;
+        border: 1px solid var(--border-primary);
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+        border-radius: 4px;
+      }
+      .time-input-fields label {
+        font-size: 0.8em;
+        margin-top: 4px;
+        color: var(--text-secondary);
+      }
+
+      #timer-display-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #timer-display-container label {
+        font-family: var(--font-headings);
+        color: var(--text-accent);
+        font-size: 1.1em;
+      }
+      #timer-display {
+        font-size: 2em;
+        color: var(--text-accent);
+        font-weight: bold;
+        font-family: var(--font-headings);
+      }
+      #game-play-view h3 {
+        text-align: center;
+      }
+
+      #player-project-work-area {
+        border-top: 1px solid var(--border-primary);
+        padding-top: 15px;
+        margin-top: 20px;
+      }
+      #player-project-work-area h3,
+      #player-project-work-area h4,
+      #player-project-work-area h5 {
+        font-family: var(--font-headings);
+        color: var(--text-secondary);
+        text-align: left;
+        border-bottom: none;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+      #player-project-work-area h3 {
+        font-size: 1.2em;
+        color: var(--text-accent);
+      }
+      #player-project-work-area h4 {
+        font-size: 1.1em;
+      }
+      #player-project-work-area h5 {
+        font-size: 1em;
+        margin-top: 15px;
+      }
+
+      #race-milestones-list > div,
+      #race-tasks-list > li {
+        background-color: var(--bg-item);
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border-left: 4px solid var(--border-accent);
+        transition: background-color 0.2s ease;
+        font-size: 0.95em;
+      }
+      #race-milestones-list > div {
+        cursor: pointer;
+      }
+      #race-milestones-list > div:hover {
+        background-color: var(--bg-item-hover);
+      }
+      #race-tasks-list > li {
+        display: flex;
+        align-items: center;
+      }
+      #race-tasks-list input[type="checkbox"] {
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+        accent-color: var(--checkbox-accent);
+      }
+      #race-tasks-list label.completed-task {
+        text-decoration: line-through;
+        color: var(--text-completed);
+        font-style: italic;
+      }
+      .game-nav-btn {
+        font-size: 0.85em !important;
+        padding: 6px 10px !important;
+        margin-bottom: 10px !important;
+      }
+
+      #active-race-controls {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body class="theme-dark">
+    <div class="container">
+      <header>
+        <h1>Productivity Race!</h1>
+        <button
+          id="back-to-tracker-btn"
+          class="nav-btn"
+          style="
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 8px 12px;
+            font-size: 0.9em;
+          "
+        >
+          &larr; To Tracker
+        </button>
+      </header>
+
+      <div id="game-setup-view">
+        <h2 style="text-align: center">Configure Your Race</h2>
+        <div class="input-group setup-controls">
+          <div>
+            <label for="difficulty-select">Difficulty:</label
+            ><select id="difficulty-select">
+              <option value="easy">Easy Peasy</option>
+              <option value="medium" selected>Challenging</option>
+              <option value="hard">Nightmare Fuel</option>
+            </select>
+          </div>
+          <div class="time-input-container">
+            <label
+              style="
+                font-weight: bold;
+                font-size: 1em;
+                color: var(--text-accent);
+              "
+              >Set Race Duration:</label
+            >
+            <div class="time-input-fields">
+              <div>
+                <input
+                  type="number"
+                  id="days-input"
+                  min="0"
+                  max="30"
+                  value="0"
+                /><label for="days-input">Days</label>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  id="hours-input"
+                  min="0"
+                  max="23"
+                  value="0"
+                /><label for="hours-input">Hours</label>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  id="minutes-input"
+                  min="0"
+                  max="59"
+                  value="5"
+                /><label for="minutes-input">Mins</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="num-bots-select">Number of AI Opponents:</label
+            ><select id="num-bots-select">
+              <option value="1">1 Bot</option>
+              <option value="2">2 Bots</option>
+              <option value="3" selected>3 Bots</option>
+              <option value="4">4 Bots</option>
+              <option value="5">5 Bots</option>
+            </select>
+          </div>
+          <div>
+            <label
+              for="race-project-select"
+              style="
+                font-weight: bold;
+                font-size: 1em;
+                color: var(--text-accent);
+              "
+              >Select Project for Race:</label
+            ><select id="race-project-select">
+              <option value="">-- Select a Project --</option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="input-group"
+          style="justify-content: center; margin-top: 25px"
+        >
+          <button
+            id="start-game-btn"
+            class="action-btn"
+            style="padding: 12px 25px; font-size: 1.1em"
+          >
+            Start Race!
+          </button>
+        </div>
+      </div>
+
+      <div id="game-play-view" class="view" style="display: none">
+        <div id="timer-display-container">
+          <label>Time Remaining</label>
+          <div id="timer-display">00:05:00</div>
+        </div>
+        <h3>Race Progress</h3>
+        <div class="competitor-area">
+          <div class="progress-bar-container">
+            <label for="player-progress">Your Project Progress:</label
+            ><progress id="player-progress" value="0" max="100"></progress
+            ><span id="player-progress-text">0%</span>
+          </div>
+        </div>
+        <div id="ai-racers-dynamic-area"></div>
+
+        <div id="player-project-work-area" style="display: none">
+          <h3 id="player-race-project-title">Competing with: [Project Name]</h3>
+          <div id="race-milestones-view">
+            <h4>Project Milestones (Stages)</h4>
+            <div
+              id="race-milestones-list"
+              class="list-container"
+              style="max-height: 180px; overflow-y: auto"
+            ></div>
+          </div>
+          <div id="race-tasks-view" style="display: none; margin-top: 15px">
+            <button
+              id="back-to-race-milestones-btn"
+              class="nav-btn game-nav-btn"
+            >
+              &larr; Back to Milestones
+            </button>
+            <h4 id="race-current-milestone-title">
+              Milestone: [Milestone Name]
+            </h4>
+            <h5>Tasks (Objectives)</h5>
+            <ul
+              id="race-tasks-list"
+              class="list-container"
+              style="
+                max-height: 220px;
+                overflow-y: auto;
+                padding-left: 0;
+                list-style-type: none;
+              "
+            ></ul>
+          </div>
+        </div>
+
+        <div id="game-status"></div>
+
+        <div id="active-race-controls" style="display: none">
+          <button id="quit-race-btn" class="delete-btn">Abandon Race</button>
+        </div>
+
+        <div
+          style="text-align: center; margin-top: 20px; display: none"
+          id="play-again-controls"
+        >
+          <button id="play-again-btn" class="action-btn">Race Again?</button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="sound-add-item" src="add-item.mp3" preload="auto"></audio>
+    <audio
+      id="sound-complete-task"
+      src="complete-task.mp3"
+      preload="auto"
+    ></audio>
+    <script src="game.js"></script>
+  </body>
+</html>
